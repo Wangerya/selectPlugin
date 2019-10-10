@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>下拉框</title>
+  <link rel="stylesheet" href="css/select.css">
+  <link rel="stylesheet" href="font/iconfont.css">
+</head>
+
+<body>
+  <!-- ******************单选下拉框************************ -->
+  <p>超过20个选项</p>
+  <div class="self_select">
+    <div id="queryword" class="form-select"></div>
+  </div>
+  <p>小于20个选项</p>
+  <div class="self_select">
+    <div id="queryword1" class="form-select"></div>
+  </div>
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/select.js"></script>
+<script>
+  var list = [{
+    text: '孙',
+    val: '1',
+  }, {
+    text: '王尔雅',
+    val: '2',
+  }, {
+    text: '兆的撒',
+    val: '3',
+  }, {
+    text: '打算李',
+    val: '4',
+  }, {
+    text: '大苏打孙',
+    val: '1',
+  }, {
+    text: '王',
+    val: '2',
+  }, {
+    text: '兆',
+    val: '3',
+  }, {
+    text: '李',
+    val: '4',
+  }, {
+    text: '孙',
+    val: '1',
+  }, {
+    text: '王',
+    val: '2',
+  }, {
+    text: '兆',
+    val: '3',
+  }, {
+    text: '李',
+    val: '4',
+  }, {
+    text: '孙',
+    val: '1',
+  }, {
+    text: '王',
+    val: '2',
+  }, {
+    text: '兆',
+    val: '3',
+  }, {
+    text: '李',
+    val: '4',
+  }, {
+    text: '孙',
+    val: '1',
+  }, {
+    text: '王',
+    val: '2',
+  }, {
+    text: '兆',
+    val: '3',
+  }, {
+    text: '李',
+    val: '4',
+  }, {
+    text: '孙',
+    val: '1',
+  }, {
+    text: '王',
+    val: '2',
+  }, {
+    text: '兆',
+    val: '3',
+  }, {
+    text: '李',
+    val: '4',
+  }];
+  var list1 = [{
+    text: '孙',
+    val: '1',
+  }, {
+    text: '王',
+    val: '2',
+  }, {
+    text: '兆',
+    val: '3',
+  }, {
+    text: '李',
+    val: '4',
+  }];
+  $('#queryword').select({
+    series: list, 
+    callback(ele) {
+      console.log(ele[0].innerText)
+    }
+  });
+  $('#queryword1').select({
+    series: list1,
+    callback(ele) {
+      console.log(ele[0].innerText)
+    }
+  })
+</script>
+
+</html>
